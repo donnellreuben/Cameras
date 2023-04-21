@@ -58,15 +58,22 @@ scene.add(camera)
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
-controls.enableDamping = true
 // controls.target.y = 1
 // controls.update()
+
+    // damping
+controls.enableDamping = true
+
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas
 })
+
 renderer.setSize(sizes.width, sizes.height)
+
+// CANVAS BACKGROUND COLOR
+renderer.setClearColor("white");
 
 // Animate
 const clock = new THREE.Clock()
